@@ -1,0 +1,57 @@
+[
+  {
+    "id": "kw_density",
+    "category": "mots-cles",
+    "text": "Un ATS classe les candidatures selon la densité de mots-cles partages avec l'offre. Reprendre les intitules exacts de competences et d'outils utilises dans l'offre (ex: 'Spring Boot' plutot que 'framework Java') augmente significativement le score lexical sans paraitre artificiel si insere dans un vrai contexte de mission."
+  },
+  {
+    "id": "missing_skill_action",
+    "category": "competences-manquantes",
+    "text": "Quand une competence demandee dans l'offre est absente du CV mais reellement maitrisee par le candidat, il faut l'ajouter explicitement dans la section competences ou dans une experience, meme brievement, plutot que de supposer qu'elle sera deduite."
+  },
+  {
+    "id": "section_structure",
+    "category": "structure",
+    "text": "Les ATS parsent generalement le CV via des titres de section standards (Experience, Formation, Competences, Projets). Un CV sans ces titres explicites, ou utilisant des tableaux/colonnes complexes, peut etre mal parse et perdre des informations cles avant meme l'evaluation humaine."
+  },
+  {
+    "id": "quantify_achievements",
+    "category": "redaction",
+    "text": "Les realisations chiffrees (pourcentage de gain de performance, nombre d'utilisateurs, taille d'equipe, delai de livraison) sont plus convaincantes pour un recruteur qu'une simple liste de taches, et elles renforcent aussi le score semantique car elles densifient le contenu pertinent."
+  },
+  {
+    "id": "action_verbs",
+    "category": "redaction",
+    "text": "Demarrer chaque ligne d'experience par un verbe d'action au passe (developpe, concu, optimise, deploye) plutot que par 'responsable de' ou 'en charge de' rend le CV plus dynamique et mieux aligne avec le style attendu par les recruteurs techniques."
+  },
+  {
+    "id": "junior_positioning",
+    "category": "profil-junior",
+    "text": "Pour un profil junior ou en alternance, les projets academiques et personnels (avec stack technique precise) comptent comme experience aux yeux des ATS modernes s'ils sont decrits avec le meme niveau de detail qu'une experience professionnelle: contexte, stack, role, resultat."
+  },
+  {
+    "id": "semantic_vs_lexical_gap",
+    "category": "interpretation-score",
+    "text": "Un score semantique (SBERT) eleve mais un score lexical (BM25/TF-IDF) faible indique que le CV est pertinent sur le fond mais n'utilise pas le vocabulaire exact de l'offre: c'est le signal le plus actionnable, car corrige par un simple ajustement de formulation sans changer le contenu reel."
+  },
+  {
+    "id": "ats_parseability",
+    "category": "parseabilite",
+    "text": "Les elements suivants degradent la lecture par un ATS: texte dans des images, en-tetes/pieds de page contenant des informations critiques, polices non standards, et mise en page en colonnes multiples qui melange l'ordre de lecture du texte extrait."
+  },
+  {
+    "id": "soft_skills_placement",
+    "category": "soft-skills",
+    "text": "Les soft skills sont mieux valorisees quand elles sont demontrees via un exemple concret dans une experience plutot que listees seules (ex: 'coordination d'une equipe de 4 personnes' plutot que juste 'leadership')."
+  },
+  {
+    "id": "skill_vs_experience",
+    "category": "roadmap",
+    "text": "Une competence technique isolee (un framework, un outil, une certification) peut generalement etre acquise a un niveau operationnel en quelques semaines a quelques mois de pratique reguliere. L'experience professionnelle, elle, ne peut pas etre acceleree artificiellement: des annees de responsabilite ne se rattrapent pas en falsifiant un CV, mais peuvent etre partiellement compensees par des projets concrets demontrant les memes responsabilites a plus petite echelle."
+  },
+  {
+    "id": "realistic_timeframes",
+    "category": "roadmap",
+    "text": "Des ordres de grandeur realistes pour combler un manque de competence: maitrise basique d'un nouvel outil ou langage (2 a 4 semaines de pratique reguliere), certification cloud associate (4 a 8 semaines de preparation), notions solides en architecture ou methodologie (2 a 3 mois via un projet personnel applique). Promettre un delai plus court qu'un de ces ordres de grandeur dans un plan d'action serait malhonnete envers le candidat."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "backend": ["python", "java", "spring boot", "django", "fastapi", "node.js", "express", "sql", "postgresql", "mysql", "mongodb", "redis", "rest api", "graphql", "microservices", "docker", "kubernetes", "ci/cd", "git", "junit", "pytest", "rabbitmq", "kafka"],
+  "frontend": ["react", "vue", "angular", "javascript", "typescript", "html", "css", "sass", "tailwind", "redux", "next.js", "webpack", "vite", "responsive design", "accessibilite", "ux", "ui"],
+  "data_ai": ["machine learning", "deep learning", "nlp", "pytorch", "tensorflow", "scikit-learn", "pandas", "numpy", "sql", "data visualization", "power bi", "tableau", "etl", "spark", "rag", "llm", "embeddings", "vector database", "prompt engineering"],
+  "devops_cloud": ["aws", "azure", "gcp", "docker", "kubernetes", "terraform", "ansible", "jenkins", "github actions", "gitlab ci", "monitoring", "linux", "nginx"],
+  "soft_skills": ["travail d'equipe", "communication", "autonomie", "rigueur", "gestion de projet", "agile", "scrum", "resolution de problemes", "adaptabilite", "leadership"],
+  "methodologies": ["agile", "scrum", "kanban", "tdd", "devops", "clean code", "soa", "mvc"]
+}
