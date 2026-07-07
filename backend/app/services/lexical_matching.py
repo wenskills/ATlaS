@@ -1,10 +1,4 @@
 """Matching lexical: TF-IDF (cosine) et BM25.
-
-BM25 est l'algorithme de scoring de pertinence le plus repandu dans les
-moteurs de recherche/ATS reels (variante d'Okapi BM25, utilisee par
-Elasticsearch/Lucene, sur lesquels s'appuient une partie des ATS du marche
-comme Greenhouse ou Taleo). On l'ajoute ici en complement du TF-IDF, qui
-reste plus simple mais moins representatif de l'etat de l'art recherche.
 """
 from __future__ import annotations
 
