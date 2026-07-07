@@ -1,10 +1,4 @@
 """Extraction de competences par correspondance contre une taxonomie.
-
-La plupart des ATS du marche (Greenhouse, Workday, Taleo...) ne font pas de
-NLP complexe pour reperer les competences: ils font un matching de termes
-contre un referentiel/taxonomie predefinie. C'est ce comportement qu'on
-reproduit ici, ce qui rend le score plus proche de la realite du terrain
-que du SBERT seul.
 """
 from __future__ import annotations
 
