@@ -1,10 +1,4 @@
 """Generation de lettre de motivation.
-
-Contrairement au conseiller IA (section RAG visible dans l'app), la lettre
-generee ne doit jamais mentionner qu'elle a ete ecrite par une IA: c'est un
-document que la personne va reellement envoyer a un recruteur. La
-transparence sur l'usage de l'IA reste dans l'interface (tag visible dans
-l'app), jamais dans le contenu exporte.
 """
 from __future__ import annotations
 
