@@ -3,13 +3,6 @@
 (2) les notices pertinentes recuperees dans la base de connaissances RH,
 puis (3) appelle l'API Gemini (Google) pour generer un plan d'amelioration
 structure et personnalise du CV.
-
-Choix de Gemini plutot que Claude pour cette demo: l'API Gemini propose un
-vrai palier gratuit (contrairement a l'API Claude, payante a l'usage des le
-premier appel), ce qui permet de laisser la demo ouverte publiquement sans
-generer de facturation. Si aucune cle API n'est configuree (GEMINI_API_KEY
-absente), le module degrade proprement vers un plan base sur des regles
-simples, pour que la demo reste fonctionnelle sans cle.
 """
 from __future__ import annotations
 
