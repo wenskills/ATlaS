@@ -1,6 +1,6 @@
 """Matching semantique base sur Sentence-BERT.
 
-En plus du score global (deja present dans la v1 du POC), ce module ajoute
+En plus du score global, ce module ajoute
 une decomposition phrase par phrase: pour chaque phrase de l'offre, on
 identifie la phrase du CV la plus proche semantiquement. C'est cette
 decomposition qui alimente ensuite le conseiller IA (quelles phrases de
