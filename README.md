@@ -1,4 +1,4 @@
-# ATlaS — AI Talent Semantic Matching
+# ATlaS — Anti-Trauma for Lost Applicant Survivors
 
 > Moteur de matching CV/offre d'emploi inspiré du fonctionnement réel des ATS (Applicant Tracking Systems), enrichi d'un conseiller IA basé sur du RAG (Retrieval-Augmented Generation) qui génère un plan d'amélioration personnalisé du CV.
 
