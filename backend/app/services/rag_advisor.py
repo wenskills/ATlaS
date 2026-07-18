@@ -24,12 +24,6 @@ def _build_retrieval_query(missing_skills: list[str], coverage: float) -> str:
 
 
 def _fallback_plan(analysis: dict, kb_hits: list[dict], reason: str = "no_api_key") -> dict:
-    """Plan degrade sans appel LLM, base sur des regles deterministes.
-
-    `reason` distingue pourquoi on degrade (cle absente, Gemini surcharge,
-    reponse non parsable) afin que le frontend affiche un message honnete
-    plutot qu'un message generique identique dans tous les cas.
-    """
     actions = []
     missing = analysis["skills"]["missing_skills"]
     if missing:
@@ -141,10 +135,6 @@ Genere le plan d'amelioration JSON."""
             break
         except Exception as exc:
             last_error = exc
-            # Erreurs transitoires (surcharge cote Google, quota momentane):
-            # on retente avec un court delai avant d'abandonner. Une erreur
-            # definitive (cle invalide, etc.) echouera de la meme facon a
-            # chaque tentative, donc le cout des retries reste minime.
             print(f"[rag_advisor] Tentative {attempt + 1}/3 echouee: {exc}")
             time.sleep(1.5 * (attempt + 1))
 
