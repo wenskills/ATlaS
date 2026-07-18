@@ -1,10 +1,4 @@
 """Matching semantique base sur Sentence-BERT.
-
-En plus du score global, ce module ajoute
-une decomposition phrase par phrase: pour chaque phrase de l'offre, on
-identifie la phrase du CV la plus proche semantiquement. C'est cette
-decomposition qui alimente ensuite le conseiller IA (quelles phrases de
-l'offre ne trouvent aucun echo fort dans le CV).
 """
 from __future__ import annotations
 
@@ -29,15 +23,6 @@ def split_sentences(text: str) -> list[str]:
 
 
 def _is_usable_sentence(sentence: str) -> bool:
-    """Filtre les phrases trop courtes ou corrompues par l'extraction PDF.
-
-    Les CV qui presentent leurs competences via des icones/logos plutot que
-    du texte produisent souvent des fragments du type "en , , , et ." une
-    fois le PDF extrait en texte brut: la structure de la phrase survit mais
-    le contenu entre les virgules a disparu. On detecte ce cas via le ratio
-    de caracteres alphabetiques et la presence de virgules consecutives non
-    separees par un mot.
-    """
     if len(sentence) <= 8:
         return False
     if re.search(r",\s*,", sentence):
@@ -56,12 +41,6 @@ def sbert_score(job_offer: str, cv_text: str) -> float:
 
 
 def sentence_level_gaps(job_offer: str, cv_text: str, threshold: float = 0.35) -> list[dict]:
-    """Pour chaque phrase de l'offre, renvoie la meilleure phrase du CV qui
-    y correspond et le score associe. En dessous d'un second seuil plus bas
-    (no_match_threshold), aucune phrase du CV n'est assez proche pour
-    constituer une correspondance credible: on le signale explicitement
-    plutot que d'afficher un "meilleur match" trompeur.
-    """
     model = get_model()
     job_sentences = split_sentences(job_offer)
     cv_sentences = split_sentences(cv_text)
