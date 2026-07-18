@@ -15,10 +15,6 @@ with open(_TAXONOMY_PATH, encoding="utf-8") as f:
 
 _ALL_SKILLS: list[str] = sorted({s for skills in _TAXONOMY.values() for s in skills})
 
-# Une simple recherche "in" provoque des faux positifs sur des skills courts:
-# "ui" matchait a l'interieur de "equipe", "sql" a l'interieur de "postgresql".
-# On utilise donc des limites de mots (\b) pour n'accepter que des occurrences
-# isolees du terme, y compris pour les skills multi-mots (ex: "spring boot").
 _SKILL_PATTERNS = {
     skill: re.compile(r"\b" + re.escape(preprocess(skill)) + r"\b")
     for skill in _ALL_SKILLS
