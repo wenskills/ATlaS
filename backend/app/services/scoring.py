@@ -1,11 +1,4 @@
-"""Score composite pondere, inspire de la maniere dont les ATS reels
-combinent plusieurs signaux (et pas un score unique): correspondance de
-competences, score lexical, score semantique, et qualite de parsing.
 
-Les poids sont volontairement configurables: un recruteur tech pondere
-davantage les competences techniques exactes, un recruteur RH generaliste
-pondere davantage le semantique/l'experience globale.
-"""
 from __future__ import annotations
 
 DEFAULT_WEIGHTS = {
@@ -17,11 +10,6 @@ DEFAULT_WEIGHTS = {
 
 
 def parseability_score(sections: dict[str, bool], has_email: bool, has_phone: bool) -> float:
-    """Approxime la capacite d'un ATS a correctement parser le CV: presence
-    des sections standards + coordonnees detectables. Ne capture pas les
-    problemes de mise en page visuelle (colonnes, images) puisqu'on travaille
-    sur du texte deja extrait, mais capture les signaux structurels.
-    """
     section_score = sum(sections.values()) / len(sections) if sections else 0.0
     contact_score = (int(has_email) + int(has_phone)) / 2
     return round(0.7 * section_score + 0.3 * contact_score, 3)
