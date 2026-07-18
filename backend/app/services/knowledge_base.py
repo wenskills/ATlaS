@@ -1,13 +1,4 @@
 """Base de connaissances vectorisee pour le RAG.
-
-On reutilise le meme modele SBERT que le matching semantique (pas de
-dependance supplementaire type ChromaDB/FAISS necessaire a cette echelle:
-une dizaine de notices tiennent largement en memoire). Les embeddings sont
-calcules une seule fois au demarrage puis caches.
-
-A l'echelle, on remplacerait `_KB_EMBEDDINGS` par un vrai vector store
-(ChromaDB, pgvector, Pinecone) mais le contrat (retrieve(query, k)) resterait
-identique - c'est ce qui rend ce module facile a faire evoluer.
 """
 from __future__ import annotations
 
