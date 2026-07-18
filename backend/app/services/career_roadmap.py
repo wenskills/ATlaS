@@ -1,16 +1,4 @@
 """Generation du plan de carriere a 6 mois.
-
-Contrairement a un roadmap generique base uniquement sur les competences
-manquantes, ce module distingue explicitement deux categories d'ecarts:
-
-- Les competences techniques (frameworks, outils, certifications): reellement
-  comblables, avec une estimation de temps realiste.
-- L'experience professionnelle (anciennete, niveau de responsabilite): non
-  rattrapable artificiellement. Le plan propose des actions de compensation
-  (projets concrets) plutot qu'une fausse promesse de delai.
-
-Meme pipeline RAG que rag_advisor.py (retrieval + generation Gemini), avec
-repli base sur des regles si aucune cle API n'est configuree.
 """
 from __future__ import annotations
 
