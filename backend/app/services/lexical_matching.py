@@ -18,13 +18,6 @@ def tfidf_score(job_offer: str, cv_text: str) -> float:
 
 
 def bm25_score(job_offer: str, cv_text: str) -> float:
-    """Score BM25 normalise entre 0 et 1.
-
-    BM25 n'est pas borne nativement (c'est un score de pertinence relatif
-    entre documents d'un corpus), on le normalise donc avec une fonction de
-    saturation logistique pour le rendre comparable aux autres scores
-    du pipeline.
-    """
     cv_tokens = tokenize(cv_text)
     job_tokens = tokenize(job_offer)
 
@@ -33,8 +26,5 @@ def bm25_score(job_offer: str, cv_text: str) -> float:
 
     bm25 = BM25Okapi([cv_tokens])
     raw_score = bm25.get_scores(job_tokens)[0]
-
-    # Saturation logistique : ramene un score BM25 typiquement entre 0 et ~15
-    # vers une plage 0-1 lisible pour l'utilisateur.
     normalized = raw_score / (raw_score + 5) if raw_score > 0 else 0.0
     return round(float(normalized), 3)
