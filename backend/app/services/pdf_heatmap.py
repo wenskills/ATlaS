@@ -1,17 +1,4 @@
 """Heatmap du CV: colore directement le document plutot que du texte retype.
-
-Approche:
-1. PyMuPDF (fitz) extrait chaque ligne du PDF avec ses coordonnees exactes
-   (bounding box) sur la page.
-2. Chaque ligne est comparee semantiquement (SBERT) a l'offre d'emploi pour
-   obtenir un niveau de correspondance (fort/moyen/faible/non analyse).
-3. La page est aussi rendue en image (PNG) afin que le frontend puisse
-   superposer des rectangles colores aux positions exactes, par-dessus le
-   vrai document plutot qu'un texte recopie.
-
-Les coordonnees sont exprimees dans le repere de l'image rendue (apres
-application du zoom), pas dans le repere PDF brut, pour que le frontend
-n'ait qu'a positionner des rectangles sans recalcul.
 """
 from __future__ import annotations
 
